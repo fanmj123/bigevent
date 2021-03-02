@@ -18,17 +18,17 @@ function getUserInfo() {
             randerAvatar(res.data);
         },
         // 无论获取成功还是失败都会执行
-        complete: function (res) {
-            console.log(res);
-            // 判断是否请求成功
-            if (res.responseJSON.status === 1 && res.responseJSON.message === "身份认证失败！") {
-                // 请求失败
-                // 1. 强制清空token
-                localStorage.removeItem('token');
-                // 2.跳转登录页面
-                location.href = "/login.html"
-            }
-        }
+        // complete: function (res) {
+        //     console.log(res);
+        //     // 判断是否请求成功
+        //     if (res.responseJSON.status === 1 && res.responseJSON.message === "身份认证失败！") {
+        //         // 请求失败
+        //         // 1. 强制清空token
+        //         localStorage.removeItem('token');
+        //         // 2.跳转登录页面
+        //         location.href = "/login.html"
+        //     }
+        // }
     })
     //渲染头像
     function randerAvatar(user) {

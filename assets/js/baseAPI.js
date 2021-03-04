@@ -21,3 +21,7 @@ $.ajaxPrefilter(function (options) {
         Authorization: localStorage.getItem('token') || ''
     }
 })
+// 屏蔽enter键
+document.onkeydown = function (e) {
+    if (e.keyCode == 13) return false;
+}

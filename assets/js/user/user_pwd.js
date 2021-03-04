@@ -21,7 +21,7 @@ $(function () {
     })
     // 给修改密码注册提交监听事件
     $('.layui-form').on('submit', function (e) {
-        console.log("111");
+        // console.log("111");
         e.preventDefault()
         $.ajax({
             type: 'POST',

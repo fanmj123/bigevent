@@ -48,8 +48,12 @@ $(function () {
                     return layer.msg(res.message)
                 }
                 layer.msg('注册成功，请登录！');
+
                 // 注册成功自动跳转到登录页面
                 $('#login-link').click();
+                $("#form_login [name=username]").val($('#form_reg [name=username]').val());
+                $("#form_login [name=password]").val($('#form_reg [name=password]').val());
+
             })
     })
 
